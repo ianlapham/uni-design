@@ -1,0 +1,124 @@
+{
+  "name": "@uniswap/design-system",
+  "version": "0.0.0",
+  "description": "Uniswap design system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybookjs/design-system.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ian Lapham",
+    "email": "ian@uniswap.org"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "babel src -d dist --extensions \".js,.jsx,.ts,.tsx\" --ignore \"**/*.test.js\" --ignore \"**/*.stories.js\"",
+    "build-docs": "build-storybook --docs",
+    "build-storybook": "build-storybook",
+    "lint": "yarn lint:js && yarn lint:package",
+    "lint:js": "cross-env NODE_ENV=production eslint --cache --cache-location=.cache/eslint --ext .js,.jsx,.html,.ts,.tsx,.mjs --report-unused-disable-directives",
+    "lint:package": "sort-package-json",
+    "release": "dotenv yarn build && auto shipit",
+    "storybook": "start-storybook -p 6006"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.html": [
+      "yarn lint:js --fix"
+    ],
+    "*.js": [
+      "yarn lint:js --fix"
+    ],
+    "*.ts?(x)": [
+      "yarn lint:js --fix"
+    ],
+    "package.json": [
+      "yarn lint:package"
+    ]
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.1.6",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@types/pluralize": "^0.0.29",
+    "copy-to-clipboard": "^3.3.1",
+    "framer-motion": "^3.2.2-rc.1",
+    "pluralize": "^8.0.0",
+    "polished": "^3.6.4",
+    "prismjs": "1.20.0",
+    "prop-types": "^15.5.4",
+    "react-github-button": "^0.1.11",
+    "react-modal": "^3.11.2",
+    "react-popper-tooltip": "^2.11.1",
+    "styled-components": "^4.4.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@storybook/addon-a11y": "^6.1.0",
+    "@storybook/addon-actions": "^6.1.0",
+    "@storybook/addon-docs": "^6.1.0",
+    "@storybook/addon-essentials": "^6.1.0",
+    "@storybook/addon-storysource": "^6.1.0",
+    "@storybook/eslint-config-storybook": "^2.4.0",
+    "@storybook/linter-config": "^2.5.0",
+    "@storybook/react": "^6.1.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/styled-components": "^5.1.0",
+    "auto": "^9.50.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "chromatic": "^5.0.0",
+    "cross-env": "^7.0.2",
+    "dotenv-cli": "^3.1.0",
+    "eslint": "^7.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "node-fetch": "^2.6.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "seedrandom": "^3.0.5",
+    "sort-package-json": "^1.44.0",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=5"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "released"
+    ]
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "storybook": {
+    "title": "Storybook Design System",
+    "url": "https://master--5ccbc373887ca40020446347.chromatic.com"
+  }
+}
