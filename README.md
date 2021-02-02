@@ -3,7 +3,7 @@
 ## Overview
 
 - 📚 [Storybook](https://storybook.js.org) for UI component development and [auto-generated docs](https://medium.com/storybookjs/storybook-docs-sneak-peak-5be78445094a)
-- 💅 [Styled-components](https://www.styled-components.com/) for component-scoped styling
+- ⚡ [Chakra-UI](https://chakra-ui.com/) for component-scoped styling
 - ⚛️ [React](https://reactjs.org/) declarative component-centric UI
 
 Maintaining the system
