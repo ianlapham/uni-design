@@ -16,6 +16,10 @@ export const color = {
   secondary: '#1EA7FD', // ocean
   tertiary: '#DDDDDD',
 
+  brand: {
+    100: '#FF4785',
+  },
+
   orange: '#FC521F',
   gold: '#FFAE00',
   green: '#66BF3C',

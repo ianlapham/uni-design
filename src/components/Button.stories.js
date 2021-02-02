@@ -7,5 +7,9 @@ export default {
   component: Button,
 };
 
-export const Primary = (args) => <Button {...args} />;
+export const Primary = (args) => (
+  <Button size="sm" variant="solid">
+    Click me
+  </Button>
+);
 Primary.args = { children: 'Label' };

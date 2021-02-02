@@ -1,9 +1,9 @@
 import React from 'react';
 import { loadFontsForStorybook } from '../src/utils/index';
 
-import { GlobalStyle } from '../src/components/shared/global';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 
-import { ChakraProvider } from '@chakra-ui/react';
+import theme from '../src/components/shared/theme';
 
 export const parameters = {
   // automatically create action args for all props that start with "on"
@@ -21,8 +21,8 @@ export const parameters = {
 
 const withGlobalStyle = (storyFn) => (
   <>
-    <ChakraProvider>
-      <GlobalStyle />
+    <ChakraProvider theme={theme}>
+      <CSSReset />
       {storyFn()}
     </ChakraProvider>
   </>

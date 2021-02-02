@@ -1,17 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
-import { chakra } from '@chakra-ui/react';
-
-export const StyledButton = styled.button``;
+import { Button as CButton } from '@chakra-ui/react';
 
 export const Button = () => {
   return (
-    <chakra.button px="3" py="2" bg="green.200" rounded="md" _hover={{ bg: 'green.300' }}>
-      Button from chakra
-    </chakra.button>
+    <CButton colorScheme="primary" color="black" bg="primary.200">
+      Primary
+    </CButton>
   );
 };
 
 Button.propTypes = {};
-
 Button.defaultProps = {};
