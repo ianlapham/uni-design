@@ -12,10 +12,16 @@ Maintaining the system
 - ✅ [Chromatic](https://www.chromatic.com/) to prevent UI bugs in components (by Storybook maintainers)
 - 🚥 [CircleCI](https://circleci.com/) Continuous integration
 
-## Install
+## Develop
 
 ```bash
-npm install --save @storybook/design-system
+yarn install
+```
+
+#### Work on components
+
+```bash
+yarn storybook
 ```
 
 ## Global Styles
