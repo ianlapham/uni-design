@@ -1,8 +1,6 @@
 import React from 'react';
 import { loadFontsForStorybook } from '../src/utils/index';
-
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
-
 import theme from '../src/components/shared/theme';
 
 export const parameters = {
