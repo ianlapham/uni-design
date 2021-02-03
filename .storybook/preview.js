@@ -3,6 +3,7 @@ import { loadFontsForStorybook } from '../src/utils/index';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import theme from '../src/components/shared/theme';
 import { useDarkMode } from 'storybook-dark-mode';
+const themes = require('@storybook/theming');
 
 export const parameters = {
   // automatically create action args for all props that start with "on"
