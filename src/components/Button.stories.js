@@ -18,6 +18,5 @@ export const All = () => (
   <FixedColumn>
     <Button>Primary</Button>
     <Button type="primaryOutline">Outlined</Button>
-    <Button isLoading>Loading</Button>
   </FixedColumn>
 );
